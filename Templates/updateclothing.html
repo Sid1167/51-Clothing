@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Update Product Form
+{% endblock title %}
+
+{% block body %}
+<form method="post">
+    <div class="mb-3">
+        <label for="clothingId" class="form-label">Clothing Id</label>
+        <input type="text" class="form-control" id="clothingId" name="clothingId" value="{{clothing[0]}}" readonly>
+      </div>
+    <div class="mb-3">
+      <label for="clothingName" class="form-label">Clothing Name</label>
+      <input type="text" class="form-control" id="clothingName" name="clothingName" value="{{clothing[1]}}">
+    </div>
+    <div class="mb-3">
+        <label for="clothingPrice" class="form-label">Clothing Price</label>
+        <input type="text" class="form-control" id="clothingPrice" name="clothingPrice" value="{{clothing[2]}}">
+    </div>
+    <div class="mb-3">
+        <label for="clothingDescription" class="form-label">Clothing Description</label>
+        <textarea class="form-control" rows="3" cols="25" id="clothingDescription" name="clothingDescription">{{clothing[3]}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}

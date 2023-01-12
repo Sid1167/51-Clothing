@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Search by name
+{% endblock title %}
+
+{% block body %}
+<h1>Clothing By Id</h1>
+<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>{{id[0]}}</td>
+    </tr>
+
+</table>
+{% endblock body %}

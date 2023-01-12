@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Product Form
+{% endblock title %}
+
+{% block body %}
+<form method="post">
+    <div class="mb-3">
+        <lable for="clothingName" class="form-label">Clothing Name</lable>
+        <input type="text" class="form-control" id="clothingName" name="clothingName">
+    </div>
+    <div class="mb-3">
+        <lable for="clothingPrice" class="form-label">Clothing Price</lable>
+        <input type="text" class="form-control" id="clothingPrice" name="clothingPrice">
+    </div>
+    <div class="mb-3">
+        <lable for="clothingDescription" class="form-label">Clothing Description</lable>
+        <input type="text" class="form-control" id="clothingDescription" name="clothingDescription">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}

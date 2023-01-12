@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Clothing
+{% endblock title %}
+
+{% block body %}
+<h1>Clothing List</h1>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name<a href="/sortbyname"><i class="bi bi-arrow-up"></i></a> <a href="/sortbynamedesc"><i class="bi bi-arrow-down"></i></a></th>
+        <th> Price<a href="/sortbyprice"><i class="bi bi-arrow-up"></i></a> <a href="/sortbypricedesc"><i class="bi bi-arrow-down"></i></a></th>
+        <th>Description</th>
+    </tr>
+
+    {% for clothing in clothinglist %}
+        <tr>
+            <td>{{clothing[0]}}</td>
+            <td>{{clothing[1]}}</td>
+            <td>{{clothing[2]}}</td>
+            <td>{{clothing[3]}}</td>
+            <td><a href="deleteclothing/{{clothing[0]}}" class="btn btn-danger">Delete</a></td>
+            <td><a href="updateclothing/{{clothing[0]}}" class="btn btn-warning">Update</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock body %}
