@@ -1,7 +1,7 @@
-#51-Clothing
-##Clothing Management System based on Python using MySQL and Flask Framework
+# 51-Clothing
+## Clothing Management System based on Python using MySQL and Flask Framework
 
 
-###Features
+### Features
 1. CRUD operation
 2. Chatbot
